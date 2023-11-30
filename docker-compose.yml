@@ -33,8 +33,6 @@ services:
       args:
         - DEADLINE_VERSION=$DEADLINE_VERSION
         - DEADLINE_INSTALLER_BASE=$DEADLINE_INSTALLER_BASE
-        - AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
-        - AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
     <<: &default
       image: postwork/deadline-client
       environment:
