@@ -5,7 +5,6 @@ services:
     restart: unless-stopped
     build:
       context: .
-      dockerfile: dockerfile
       target: db
       args:
         - DEADLINE_VERSION=$DEADLINE_VERSION
@@ -30,7 +29,6 @@ services:
     hostname: deadline-rcs.$ROOT_DOMAIN
     build:
       context: .
-      dockerfile: dockerfile
       target: client
       args:
         - DEADLINE_VERSION=$DEADLINE_VERSION
