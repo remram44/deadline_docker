@@ -3,6 +3,7 @@ services:
 
   deadline-db:
     restart: unless-stopped
+    image: postwork/deadline-db
     build:
       context: .
       target: db
