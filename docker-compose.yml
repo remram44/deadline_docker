@@ -3,7 +3,7 @@ services:
 
   deadline-db:
     restart: unless-stopped
-    image: postwork/deadline-db
+    image: ghcr.io/remram44/deadline_docker/db
     build:
       context: .
       target: db
@@ -37,7 +37,7 @@ services:
         - AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
         - AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
     <<: &default
-      image: postwork/deadline-client
+      image: ghcr.io/remram44/deadline_docker/client
       environment:
         - DEADLINE_INSTALLER_BASE=$DEADLINE_INSTALLER_BASE
         - DEADLINE_VERSION=$DEADLINE_VERSION
